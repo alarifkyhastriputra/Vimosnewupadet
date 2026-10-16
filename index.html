@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, interactive-widget=resizes-content, viewport-fit=cover">
+  <title>VIMOS - Social</title>
+  <script>
+    (function() {
+      var suppressError = function(msg) {
+        if (!msg) return false;
+        var s = String(msg).toLowerCase();
+        return s.indexOf('script error') > -1 || s.indexOf('profitableratecpmnetwork') > -1 || s.indexOf('invoke.js') > -1;
+      };
+      window.onerror = function(msg, url, line, col, error) {
+        if (suppressError(msg) || suppressError(url)) {
+          return true;
+        }
+        return false;
+      };
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event && event.reason ? (event.reason.message || event.reason) : '';
+        if (suppressError(reason)) {
+          if (event.preventDefault) event.preventDefault();
+          if (event.stopPropagation) event.stopPropagation();
+        }
+      }, true);
+    })();
+  </script>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.pixabay.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
+  <link rel="dns-prefetch" href="https://cdn.pixabay.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://chiutchiyu-default-rtdb.asia-southeast1.firebasedatabase.app" crossorigin>
+  <link rel="preconnect" href="https://identitytoolkit.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://securetoken.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://picsum.photos">
+  <link rel="preconnect" href="https://fastly.picsum.photos">
+  <link rel="dns-prefetch" href="https://api.dicebear.com">
+  <link rel="dns-prefetch" href="https://picsum.photos">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #000; }
+
+    @keyframes bounce-subtle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+    .animate-bounce-subtle {
+      animation: bounce-subtle 3s ease-in-out infinite;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-white">
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

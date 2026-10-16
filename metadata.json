@@ -1,0 +1,11 @@
+{
+  "name": "Vimos",
+  "description": "A minimalist black and white social network with following systems, real-time feed, and messaging.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
